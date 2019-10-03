@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Header from './components/header';
-import Footer from './components/footer';
+import Create from './components/create';
+import Read from './components/read';
 import Content from './components/content';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
@@ -17,15 +17,16 @@ class App extends React.Component {
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link href="/">Content</Nav.Link>
-            <Nav.Link href="/read">Header</Nav.Link>
-            <Nav.Link href="/create">Footer</Nav.Link>
+            <Nav.Link href="/read">Read</Nav.Link>
+            <Nav.Link href="/create">Create</Nav.Link>
           </Nav>
         </Navbar>
 
         <Switch>
           <Route exact path="/" component={Content} />
-          <Route path="/read" component={Header} />
-          <Route path="/create" component={Footer} />
+          <Route path="/read" component={Read} />
+          <Route path="/create" component={Create} />
+          
         </Switch>
 
       {/* 
